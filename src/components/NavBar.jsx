@@ -1,0 +1,68 @@
+import React from 'react'
+import { FaBars, FaTimes } from 'react-icons/fa'
+import Modal from './Modal'
+import { useState } from 'react'
+import HamburguerMenu from './HamburguerMenu.jsx'
+import DarkMode from './DarkMode.jsx'
+import Logo from './Logo'
+
+function NavBar() {
+  const [isOpen, setIsOpen] = useState(false)
+
+  function closeMenu() {
+    setIsOpen(false)
+  }
+  function openMenu() {
+    setIsOpen(true)
+  }
+
+  const HamburgerIconOrCancel = !isOpen ? (
+    <button
+      onClick={openMenu}
+      className='flex items-center text-black dark:text-white'
+      type='button'
+    >
+      <FaBars size={30} />
+    </button>
+  ) : (
+    <>
+      <button
+        onClick={closeMenu}
+        className='flex items-center text-black dark:text-white'
+        type='button'
+      >
+        <FaTimes size={30} />
+      </button>
+    </>
+  )
+
+  return (
+    <div>
+      <div className='flex items-center justify-between text-xl'>
+        <Logo />
+        <div className='flex items-center'>
+          <div className='hidden md:flex gap-5'>
+            <a
+              href='#projects'
+              className='text-black dark:text-white bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 hover:text-transparent  dark:hover:text-transparent'
+            >
+              Projects
+            </a>
+            <Modal />
+            <a
+              href='mailto:dmojarro2001@gmail.com'
+              className='text-black dark:text-white bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 hover:text-transparent  dark:hover:text-transparent'
+            >
+              Contact
+            </a>
+          </div>
+          <DarkMode />
+          <div className='md:hidden flex mr-5'>{HamburgerIconOrCancel}</div>
+        </div>
+      </div>
+      {isOpen ? <HamburguerMenu /> : null}
+    </div>
+  )
+}
+
+export default NavBar

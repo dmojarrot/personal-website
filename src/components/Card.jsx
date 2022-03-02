@@ -2,7 +2,7 @@ import profilePicture from '../assets/profilePicture.png'
 import CV from '../assets/CV_Diego_Mojarro.pdf'
 
 import { FaLinkedin, FaGithubSquare, FaTwitterSquare } from 'react-icons/fa'
-import Skills from './Skills'
+
 const songExample = {
   id: 1,
   name: 'Software Engineer',
@@ -18,14 +18,11 @@ const songExample = {
 
 export default function Card() {
   return (
-    <div className='flex flex-col items-center w-full mx-5'>
-      <div className='flex text-left'>
-        <p className='flex justify-start w-full text-5xl ml-5 mb-10 font-semibold text-pink-600'>
-          Welcome human!
-        </p>
-      </div>
-
-      <div className='dark:bg-black bg-white rounded-3xl w-full md:w-5/12 mx-10 shadow-lg'>
+    <div className='flex flex-col items-center w-full mx-5 md:w-6/12'>
+      <p className='flex justify-start w-full text-5xl ml-10 mb-5 font-semibold text-pink-600'>
+        Hi There, i'm
+      </p>
+      <div className='dark:bg-black bg-white rounded-3xl w-full shadow-lg'>
         <div className='flex justify-center pt-7'>
           <div className='flex flex-col items-center justify-center'>
             <div className='flex justify-center'>
@@ -74,7 +71,6 @@ export default function Card() {
           </div>
         </div>
       </div>
-      <div className='angle fixed right-0 -z-10'></div>
     </div>
   )
 }

@@ -55,19 +55,19 @@ function Projects() {
   return (
     <div className='mx-5 py-10'>
       <h2
-        className='dark:text-white text-black text-3xl font-semibold py-5'
+        className='dark:text-white text-black text-3xl font-semibold py-5 pl-5'
         id='projects'
       >
         Projects
       </h2>
-      <div className='max-w-2xl mx-auto lg:max-w-none dark:bg-black bg-white rounded-lg p-5'>
+      <div className='max-w-2xl mx-auto lg:max-w-none dark:bg-black bg-white rounded-3xl w-full shadow-lg p-5'>
         <div className='mt-6 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-3 sm:gap-x-10 gap-y-10'>
           {callouts.map((callout) => (
             <div
               key={callout.name}
-              className='group relative dark:bg-black bg-white rounded-lg shadow-xl'
+              className='group relative dark:bg-black bg-white'
             >
-              <div className='relative w-full bg-black sm:aspect-w-2 rounded-t-lg sm:aspect-h-1 sm:h-64 lg:aspect-w-2 lg:aspect-h-10 overflow-auto'>
+              <div className='relative w-full bg-black sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-2 lg:aspect-h-10 overflow-auto'>
                 <Carousel>
                   {callout.imagesSrcs.map((images) => (
                     <img src={images} />
