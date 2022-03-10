@@ -21,30 +21,35 @@ import { Carousel } from 'react-responsive-carousel'
 function Projects() {
   const callouts = [
     {
+      id: 1,
       name: 'HTML/CSS/Javascript, MySql',
       description: 'Amdocs Talent Aquisition',
       imagesSrcs: [AW],
       imageAlt: 'Amdocs login',
     },
     {
+      id: 2,
       name: 'React, Taiwind CSS',
       description: 'Personal website',
       imagesSrcs: [PW],
       imageAlt: 'Landing page',
     },
     {
+      id: 3,
       name: 'Next, Tailwind CSS, Firebase, Solidity, Truffle',
       description: 'NFT Marketplace',
       imagesSrcs: [nftPW, nftPW2, nftPW3],
       imageAlt: 'User Settings Interface',
     },
     {
+      id: 4,
       name: 'SwiftUI, CoreLocation',
       description: 'WeatherApp',
       imagesSrcs: [WA, WA2, WA3],
       imageAlt: 'WeatherApp Screenshot',
     },
     {
+      id: 5,
       name: 'SwiftUI, Firebase',
       description: 'FoodBank iOS App',
       imagesSrcs: [FB, FB2, FB3],
@@ -53,9 +58,9 @@ function Projects() {
     },
   ]
   return (
-    <div className='mx-5 py-10'>
+    <div className='mx-5 pb-5'>
       <h2
-        className='dark:text-white text-black text-3xl font-semibold py-5 pl-5'
+        className='dark:text-white text-black text-3xl font-semibold pt-20 pb-5 pl-5'
         id='projects'
       >
         Projects
@@ -64,7 +69,7 @@ function Projects() {
         <div className='mt-6 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-3 sm:gap-x-10 gap-y-10'>
           {callouts.map((callout) => (
             <div
-              key={callout.name}
+              key={callout.id}
               className='group relative dark:bg-black bg-white'
             >
               <div className='relative w-full bg-black sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-2 lg:aspect-h-10 overflow-auto'>

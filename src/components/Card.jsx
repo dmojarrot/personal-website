@@ -19,8 +19,8 @@ const songExample = {
 export default function Card() {
   return (
     <div className='flex flex-col items-center w-full mx-5 md:w-6/12'>
-      <p className='flex justify-start w-full text-5xl ml-10 mb-5 font-semibold text-pink-600'>
-        Hi There, i'm
+      <p className='flex justify-start w-full text-5xl ml-10 mb-5 mt-5 font-semibold text-pink-600'>
+        Hi There, I'm
       </p>
       <div className='dark:bg-black bg-white rounded-3xl w-full shadow-lg'>
         <div className='flex justify-center pt-7'>

@@ -3,7 +3,7 @@ import ModalChevron from './ModalChevron'
 
 function HamburguerMenu() {
   return (
-    <nav className='flex flex-col h-full max-h-screen px-6  overflow-y-auto'>
+    <nav className='flex flex-col h-full max-h-screen px-6 overflow-y-auto'>
       <ul>
         <li className='mb-3 lg:hidden'>
           <a

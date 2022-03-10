@@ -37,8 +37,8 @@ function NavBar() {
   )
 
   return (
-    <div>
-      <div className='flex items-center justify-between text-xl'>
+    <div className='fixed w-full h-auto dark:bg-gradient-to-r from-zinc-700 to-zinc-900 bg-gray-100 z-50 pt-2'>
+      <div className='flex items-center justify-between text-xl w-full'>
         <Logo />
         <div className='flex items-center'>
           <div className='hidden md:flex gap-5'>

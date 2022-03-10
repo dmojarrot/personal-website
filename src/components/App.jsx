@@ -7,10 +7,8 @@ function App() {
   return (
     <div className='dark:bg-gradient-to-r from-zinc-700 to-zinc-900 bg-gray-100'>
       <NavBar />
-      <div>
-        <div className='flex justify-center pt-5'>
-          <Card />
-        </div>
+      <div className='flex justify-center pt-20'>
+        <Card />
       </div>
       <Projects />
     </div>
