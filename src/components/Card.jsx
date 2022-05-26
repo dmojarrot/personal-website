@@ -22,6 +22,7 @@ export default function Card() {
       <p className='flex justify-start w-full text-5xl ml-10 mb-5 mt-5 font-semibold text-pink-600'>
         Hi There, I'm
       </p>
+
       <div className='dark:bg-black bg-white rounded-3xl w-full shadow-lg'>
         <div className='flex justify-center pt-7'>
           <div className='flex flex-col items-center justify-center'>
@@ -39,6 +40,7 @@ export default function Card() {
             <p className='text-4xl font-extrabold dark:text-white text-black'>
               {songExample.artist}
             </p>
+
             <p className='text-2xl dark:text-white text-black font-light'>
               {songExample.name}
             </p>

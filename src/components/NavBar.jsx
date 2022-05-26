@@ -9,31 +9,60 @@ import Logo from './Logo'
 function NavBar() {
   const [isOpen, setIsOpen] = useState(false)
 
-  function closeMenu() {
-    setIsOpen(false)
-  }
-  function openMenu() {
-    setIsOpen(true)
-  }
+  // function closeMenu() {
+  //   setIsOpen(false)
+  // }
+  // function openMenu() {
+  //   setIsOpen(true)
+  // }
 
-  const HamburgerIconOrCancel = !isOpen ? (
+  // const HamburgerIconOrCancel = !isOpen ? (
+  //   <button
+  //     onClick={openMenu}
+  //     className='flex items-center text-black dark:text-white'
+  //     type='button'
+  //   >
+  //     <FaBars size={30} />
+  //   </button>
+  // ) : (
+  //   <>
+  //     <button
+  //       onClick={closeMenu}
+  //       className='flex items-center text-black dark:text-white'
+  //       type='button'
+  //     >
+  //       <FaTimes size={30} />
+  //     </button>
+  //   </>
+  // )
+
+  const genericHamburgerLine = `h-1 w-6 my-1 rounded-full dark:bg-white bg-black transition ease transform duration-300`
+
+  const HamburgerIconOrCancel = (
     <button
-      onClick={openMenu}
-      className='flex items-center text-black dark:text-white'
-      type='button'
+      className='flex flex-col justify-center items-center group'
+      onClick={() => setIsOpen(!isOpen)}
     >
-      <FaBars size={30} />
+      <div
+        className={`${genericHamburgerLine} ${
+          isOpen
+            ? 'rotate-45 translate-y-3 opacity-50 group-hover:opacity-100'
+            : 'opacity-50 group-hover:opacity-100'
+        }`}
+      />
+      <div
+        className={`${genericHamburgerLine} ${
+          isOpen ? 'opacity-0' : 'opacity-50 group-hover:opacity-100'
+        }`}
+      />
+      <div
+        className={`${genericHamburgerLine} ${
+          isOpen
+            ? '-rotate-45 -translate-y-3 opacity-50 group-hover:opacity-100'
+            : 'opacity-50 group-hover:opacity-100'
+        }`}
+      />
     </button>
-  ) : (
-    <>
-      <button
-        onClick={closeMenu}
-        className='flex items-center text-black dark:text-white'
-        type='button'
-      >
-        <FaTimes size={30} />
-      </button>
-    </>
   )
 
   return (

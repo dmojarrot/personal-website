@@ -8,9 +8,15 @@ function DarkMode() {
     <div className='flex m-5'>
       <button onClick={() => setTheme(colorTheme)}>
         {colorTheme === 'light' ? (
-          <FaRegLightbulb className='text-white' size={28} />
+          <FaRegLightbulb
+            className='text-gray-500 hover:text-white'
+            size={28}
+          />
         ) : (
-          <FaRegMoon className='text-black hover:text-purple-500' size={28} />
+          <FaRegMoon
+            className='text-gray-500 hover:text-purple-500'
+            size={28}
+          />
         )}
       </button>
     </div>
