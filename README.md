@@ -1,7 +1,7 @@
-# Personal Website
+# Personal Website 
 
 
-## Technologies used
+## Technologies used:
 
 - React.js
 - Tailwind CSS
