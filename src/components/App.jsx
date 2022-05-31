@@ -2,7 +2,7 @@ import React from 'react'
 import Card from './Card.jsx'
 import Projects from './Projects.jsx'
 import NavBar from './NavBar.jsx'
-import Skills from './Skills.jsx'
+// import Skills from './Skills.jsx'
 import { Fade, Flip } from 'react-reveal/'
 
 function App() {
